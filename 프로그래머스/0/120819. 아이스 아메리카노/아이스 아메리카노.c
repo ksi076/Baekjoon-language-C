@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int* solution(int money) {
+    // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
+    int* answer = (int*)malloc(8);
+    int cnt = 0;
+    while(money >= 5500) {
+        money -= 5500;
+        cnt++;
+    } 
+    answer[0] = cnt;
+    answer[1] = money;
+    return answer;
+}
